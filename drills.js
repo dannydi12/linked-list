@@ -37,13 +37,16 @@ function reverseLinkedList(list) {
     return list;
   }
   let currentNode = list.head;
-  let previousNode = null;
+  let previousNodeNext = null;
+  let previousNode;
   while (currentNode.next !== null) {
     previousNode = currentNode;
     currentNode = currentNode.next;
-    currentNode.next = previousNode;
+    previousNode.next = previousNodeNext;
+    previousNodeNext = previousNode;
   }
   list.head = currentNode;
+  list.head.next = previousNode;
   return list;
 }
 
