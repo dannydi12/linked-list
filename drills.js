@@ -113,7 +113,19 @@ function middleOfList(list) {
  * a cycleList function.
  */
 
-function cycleList(list) {}
+function isCycleList(list) {
+  let currentNode = list.head;
+  let futureNode = list.head;
+  while (futureNode.next !== null && futureNode.next.next) {
+    currentNode = currentNode.next;
+    futureNode = futureNode.next.next;
+
+    if (currentNode === futureNode) {
+      return true;
+    }
+  }
+  return false;
+}
 
 /*
  * Sorting a list
@@ -122,12 +134,14 @@ function cycleList(list) {}
  * use another list or any other data structure such as an array to store the data.
  */
 
-function sortLinkedList(list) {}
+function sortLinkedList(list) {
+  
+}
 
 module.exports = {
   reverseLinkedList,
   thirdFromEnd,
   middleOfList,
-  cycleList,
+  isCycleList,
   sortLinkedList,
 };

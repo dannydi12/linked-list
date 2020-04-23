@@ -10,7 +10,7 @@ const {
   reverseLinkedList,
   thirdFromEnd,
   middleOfList,
-  cycleList,
+  isCycleList,
   sortLinkedList,
 } = require("./drills");
 
@@ -18,23 +18,22 @@ function main() {
   const SLL = new LinkedList();
 
   SLL.insertLast("Apollo");
-  // SLL.insertLast('Boomer');
   SLL.insertLast("Boomer");
   SLL.insertLast("Helo");
   SLL.insertLast("Husker");
   SLL.insertLast("Starbuck");
 
-  SLL.insertLast("Tauhida");
+  // SLL.insertLast("Tauhida");
 
-  SLL.remove("Husker");
+  // SLL.remove("Husker");
 
-  SLL.insertBefore("Athena", "Boomer");
+  // SLL.insertBefore("Athena", "Boomer");
 
-  SLL.insertAfter("Hotdog", "Helo");
+  // SLL.insertAfter("Hotdog", "Helo");
 
-  SLL.insertAt("Kat", 2);
+  // SLL.insertAt("Kat", 2);
 
-  SLL.remove("Tauhida");
+  // SLL.remove("Tauhida");
 
   // console.log(JSON.stringify(SLL));
 
@@ -50,7 +49,12 @@ function main() {
   display(SLL);
 
   console.log("thirdFromEnd: ", thirdFromEnd(SLL).value);
-  console.log("Middle of list: ", middleOfList(SLL));
+  console.log("Middle of list: ", middleOfList(SLL).value);
+
+  console.log('Before cycled', isCycleList(SLL))
+
+  SLL.find("Starbuck").next = SLL.head;
+  console.log('After circle list, isCycleList: ', isCycleList(SLL))
 }
 
 main();
