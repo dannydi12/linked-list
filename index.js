@@ -1,32 +1,40 @@
-const LinkedList = require('./LinkedList');
-const { display,
+const LinkedList = require("./LinkedList");
+const {
+  display,
   size,
   isEmpty,
   findPrevious,
-  findLast } = require('./supplemental');
-const { reverseLinkedList, thirdFromEnd, middleOfList, cycleList, sortLinkedList } = require('./drills')
+  findLast,
+} = require("./supplemental");
+const {
+  reverseLinkedList,
+  thirdFromEnd,
+  middleOfList,
+  cycleList,
+  sortLinkedList,
+} = require("./drills");
 
 function main() {
   const SLL = new LinkedList();
 
-  SLL.insertLast('Apollo');
-  SLL.insertLast('Boomer');
+  SLL.insertLast("Apollo");
   // SLL.insertLast('Boomer');
-  SLL.insertLast('Helo');
-  SLL.insertLast('Husker');
-  SLL.insertLast('Starbuck');
+  SLL.insertLast("Boomer");
+  SLL.insertLast("Helo");
+  SLL.insertLast("Husker");
+  SLL.insertLast("Starbuck");
 
-  SLL.insertLast('Tauhida');
+  SLL.insertLast("Tauhida");
 
-  SLL.remove('Husker');
+  SLL.remove("Husker");
 
-  SLL.insertBefore('Athena', 'Boomer');
+  SLL.insertBefore("Athena", "Boomer");
 
-  SLL.insertAfter('Hotdog', 'Helo');
+  SLL.insertAfter("Hotdog", "Helo");
 
-  SLL.insertAt('Kat', 2);
+  SLL.insertAt("Kat", 2);
 
-  SLL.remove('Tauhida');
+  SLL.remove("Tauhida");
 
   // console.log(JSON.stringify(SLL));
 
@@ -39,10 +47,10 @@ function main() {
   // console.log('findLast: ', findLast(SLL))
 
   // reverseLinkedList(SLL)
-  display(SLL)
+  display(SLL);
 
-  console.log(thirdFromEnd(SLL).value);
-
+  console.log("thirdFromEnd: ", thirdFromEnd(SLL).value);
+  console.log("Middle of list: ", middleOfList(SLL));
 }
 
 main();
