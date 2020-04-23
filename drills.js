@@ -131,8 +131,29 @@ function isCycleList(list) {
  * Sorting a list
  * Write an algorithm that will sort a given linked list. For example given a list such as 3->2->5->7->1,
  * your program will output the sorted version of this list which will be 1->2->3->5->7. You may not
- * use another list or any other data structure such as an array to store the data.
+ * use another list or any other data structure such as an array to store the data. 
+ * Also, you can only go through the list once, O(n) runtime.
  */
+
+/*
+  var sortedList = [];
+  var index = 0;
+  var previousItemId = null; // first item in list has null previous ID
+
+  while (sortedList.length < linkedList.length) {
+      var current = linkedList[index];
+      if (current.previous_item_id === previousItemId) {
+          // found the item referencing the previous item's ID
+          previousItemId = current.item_id;
+          sortedList.push(current); // append to sorted list
+          index = 0; // start over at first element
+      } else {
+          index += 1; // check the next item
+      }
+  }
+
+  return sortedList;
+*/
 
 function sortLinkedList(list) {
   
