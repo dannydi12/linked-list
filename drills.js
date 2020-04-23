@@ -57,6 +57,10 @@ function reverseLinkedList(list) {
  * linked list, therefore don't make any modification to the linked list class that is provided to you.
 */
 
+function thirdFromEnd(list) {
+
+}
+
 /*
  * Middle of a list
  * Write an algorithm to find the middle element of a linked list. Note You may be tempted to add a 
@@ -66,6 +70,10 @@ function reverseLinkedList(list) {
  * the correct middle of the linked list. So, don't use either of these approaches.
 */
 
+function middleOfList(list) {
+
+}
+
 /*
  * Cycle in a list
  * Write an algorithm to find whether a linked list has a cycle (i.e., whether a node in the list has its 
@@ -74,6 +82,10 @@ function reverseLinkedList(list) {
  * a cycleList function.
 */
 
+function cycleList(list) {
+
+}
+
 /*
  * Sorting a list
  * Write an algorithm that will sort a given linked list. For example given a list such as 3->2->5->7->1, 
@@ -81,7 +93,15 @@ function reverseLinkedList(list) {
  * use another list or any other data structure such as an array to store the data.
 */
 
+function sortLinkedList(list) {
+
+}
+
 
 module.exports = {
-  reverseLinkedList
+  reverseLinkedList,
+  thirdFromEnd,
+  middleOfList,
+  cycleList,
+  sortLinkedList
 };
