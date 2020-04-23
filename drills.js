@@ -57,8 +57,23 @@ function reverseLinkedList(list) {
  * linked list, therefore don't make any modification to the linked list class that is provided to you.
 */
 
+// Linear Complexity O(n)
 function thirdFromEnd(list) {
-
+  if (list.head === null) {
+    return 'Empty list';
+  }
+  if (list.head.next.next === null) {
+    return 'List not big enough';
+  }
+  let currentNode = list.head.next
+  let previous1 = list.head;
+  let previous2;
+  while (currentNode.next !== null) {
+    previous2 = previous1;
+    previous1 = currentNode;
+    currentNode = currentNode.next;
+  }
+  return previous2
 }
 
 /*

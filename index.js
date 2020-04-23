@@ -4,14 +4,14 @@ const { display,
   isEmpty,
   findPrevious,
   findLast } = require('./supplemental');
-const { reverseLinkedList } = require('./drills')
+const { reverseLinkedList, thirdFromEnd, middleOfList, cycleList, sortLinkedList } = require('./drills')
 
 function main() {
   const SLL = new LinkedList();
 
   SLL.insertLast('Apollo');
   SLL.insertLast('Boomer');
-  SLL.insertLast('Boomer');
+  // SLL.insertLast('Boomer');
   SLL.insertLast('Helo');
   SLL.insertLast('Husker');
   SLL.insertLast('Starbuck');
@@ -32,14 +32,17 @@ function main() {
 
   // Supplemental Exercises
 
-  console.log(isEmpty(SLL))
-  console.log(size(SLL))
+  // console.log(isEmpty(SLL))
+  // console.log(size(SLL))
   // display(SLL)
-  console.log('findPrevious: ', findPrevious(SLL, 'Kat'))
-  console.log('findLast: ', findLast(SLL))
+  // console.log('findPrevious: ', findPrevious(SLL, 'Kat'))
+  // console.log('findLast: ', findLast(SLL))
 
-  reverseLinkedList(SLL)
+  // reverseLinkedList(SLL)
   display(SLL)
+
+  console.log(thirdFromEnd(SLL).value);
+
 }
 
 main();
